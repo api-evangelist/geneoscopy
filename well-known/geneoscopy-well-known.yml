@@ -1,0 +1,78 @@
+generated: '2026-08-04'
+method: probed
+source: live GET of /.well-known/* on every host in apis.yml
+note: >-
+  No /.well-known/ document was found on any Geneoscopy host. Both www.geneoscopy.com
+  and colosense.com are WordPress marketing sites that answer every /.well-known/* path
+  with an HTML 404, so no raw file was saved and no WellKnown / SecurityTxt / AgentCard
+  pointer is wired in apis.yml. Recorded here so later enrichment rounds do not re-probe
+  blindly.
+hosts:
+- host: https://www.geneoscopy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://colosense.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+x-evidence:
+  fetched: '2026-08-04'
+  hosts_probed:
+  - www.geneoscopy.com
+  - geneoscopy.com
+  - colosense.com
+  - www.colosense.com
+  subdomains_probed:
+  - api.geneoscopy.com
+  - developer.geneoscopy.com
+  - developers.geneoscopy.com
+  - portal.geneoscopy.com
+  - provider.geneoscopy.com
+  - order.geneoscopy.com
+  - my.geneoscopy.com
+  - status.geneoscopy.com
+  - trust.geneoscopy.com
+  subdomain_result: no DNS resolution / connection failure on all nine
+x-contract-discovery:
+  note: >-
+    STEP 0b contract discovery was run in full against every Geneoscopy host before
+    recording "no machine-readable API contract".
+  rest_openapi_probes:
+  - {url: 'https://www.geneoscopy.com/openapi.json', status: 404}
+  - {url: 'https://www.geneoscopy.com/swagger.json', status: 404}
+  - {url: 'https://www.geneoscopy.com/api-docs', status: 404}
+  - {url: 'https://www.geneoscopy.com/docs', status: 404}
+  - {url: 'https://www.geneoscopy.com/llms.txt', status: 404}
+  graphql: not found - no /graphql surface on any resolving host
+  mcp: not found - no hosted MCP server published or discoverable
+  a2a: >-
+    not found - /.well-known/agent-card.json and /.well-known/agent.json return HTML 404
+    on both hosts; nothing written to a2a/ (search-only artifact)
+  incidental_cms_endpoint:
+    url: https://www.geneoscopy.com/wp-json/
+    status: 200
+    content_type: application/json
+    assessment: >-
+      Both sites are WordPress and therefore expose the stock WordPress REST API at
+      /wp-json/. This is incidental CMS infrastructure shipped by the platform, not an
+      API product Geneoscopy publishes, documents, or supports, so it is recorded here
+      as evidence but deliberately NOT registered as an API in apis.yml.

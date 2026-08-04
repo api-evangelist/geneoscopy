@@ -1,18 +1,45 @@
 aid: geneoscopy
 name: Geneoscopy
-description: 'Geneoscopy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Geneoscopy is a commercial-stage molecular diagnostics company headquartered
+  in St. Louis, Missouri, focused on gastrointestinal health. Its platform analyzes stool-derived
+  eukaryotic RNA (seRNA) biomarkers, a proprietary approach the company applies to colorectal
+  cancer screening, inflammatory bowel disease and other gastrointestinal conditions.
+  Its lead product, ColoSense, is a noninvasive multi-target stool RNA (mt-sRNA) colorectal
+  cancer screening test approved by the FDA in May 2024 for adults aged 45 and older at
+  average risk; it evaluates eight colorectal neoplasia-associated RNA markers together
+  with occult hemoglobin, and has since been added to the American Cancer Society and NCCN
+  colorectal cancer screening guidelines. Geneoscopy operates a CLIA-certified (26D2253457)
+  and CAP-accredited clinical laboratory with permits in New York, California, Maryland,
+  Pennsylvania, Rhode Island and the District of Columbia, and partners with biopharma and
+  research organizations on stool-biomarker diagnostics and prognostics. Geneoscopy is a
+  diagnostics and clinical-laboratory company; as of this profile it publishes no public
+  developer API, SDK, developer portal, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/geneoscopy/refs/heads/main/apis.yml
+image: https://www.geneoscopy.com/wp-content/uploads/logo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enriched
 specificationVersion: '0.20'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Healthcare
+- Diagnostics
+- Molecular Diagnostics
+- Colorectal Cancer
+- Cancer Screening
+- RNA
+- Clinical Laboratory
+- Life Sciences
+- Gastroenterology
 apis: []
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +47,53 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.geneoscopy.com/
+- type: About
+  url: https://www.geneoscopy.com/about-us/
+- type: Leadership
+  url: https://www.geneoscopy.com/about-us/our-leadership/
+- type: Product
+  name: ColoSense
+  url: https://www.geneoscopy.com/colosense/
+- type: Product
+  name: ColoSense patient site
+  url: https://colosense.com/
+- type: Products
+  url: https://www.geneoscopy.com/gastrointestinal-health/
+- type: Research
+  url: https://www.geneoscopy.com/gastrointestinal-health/clinical-evidence/
+- type: Compliance
+  name: Our Lab and Our Credentials (CLIA 26D2253457, CAP, state permits)
+  url: https://www.geneoscopy.com/about-us/our-lab-and-our-credentials/
+- type: Partners
+  url: https://www.geneoscopy.com/partnerships/
+- type: Careers
+  url: https://www.geneoscopy.com/careers/
+- type: Contact
+  url: https://www.geneoscopy.com/about-us/contact/
+- type: Blog
+  name: Newsroom
+  url: https://www.geneoscopy.com/press-releases/
+- type: BlogFeeds
+  url: https://www.geneoscopy.com/feed/
+- type: TermsOfService
+  url: https://www.geneoscopy.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.geneoscopy.com/privacy-policy/
+- type: PrivacyNotice
+  name: HIPAA Notice of Privacy Practices
+  url: https://www.geneoscopy.com/notice-of-privacy/
+- type: Regulatory
+  name: ColoSense Instructions for Use
+  url: https://www.geneoscopy.com/colosense/ifu/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/geneoscopy
+- type: Twitter
+  url: https://twitter.com/GeneoscopyCo
+- type: Marketplace
+  name: Geneoscopy stock on Forge Global (third party)
   url: https://forgeglobal.com/geneoscopy_stock/
+- type: DomainSecurity
+  url: security/geneoscopy-domain-security.yml
+- type: LLMsTxt
+  url: llms/geneoscopy-llms.txt
