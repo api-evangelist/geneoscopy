@@ -15,6 +15,17 @@ description: 'Geneoscopy is a commercial-stage molecular diagnostics company hea
   diagnostics and clinical-laboratory company; as of this profile it publishes no public
   developer API, SDK, developer portal, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/geneoscopy/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.geneoscopy.com/wp-content/uploads/logo.png
 x-type: company
 x-source: harvest:secondary-market
